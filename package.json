@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "pm2-prod": "npx pm2 start npm --name my_board_server -- run dev"
   },
   "author": "",
   "license": "ISC",
