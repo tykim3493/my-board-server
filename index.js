@@ -11,7 +11,7 @@ const path = require('path');
 const app = express()
 const db = require('./models')
 
-app.use(cors({ origin: "*", credentials: true }));
+app.use(cors({ origin: "http://localhost:4000", credentials: true }));
 // 미들웨어
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); // 쿼리 사용
