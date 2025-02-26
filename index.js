@@ -11,10 +11,11 @@ const path = require('path');
 const app = express()
 const db = require('./models')
 
+app.use(cors({ origin: "*", credentials: true }));
 // 미들웨어
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); // 쿼리 사용
-app.use(cors({ origin: "*", credentials: true }));
+
 app.use(bodyParser.json());
 // app.use(fileUpload());
 db.sequelize.sync({ force: false }) // ORM이 테이블을 생성할 수 없도록
